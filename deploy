@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh root@10.0.3.220 <<EOF
+ cd /var/www/html/test
+ git pull
+ npm install --production
+ pm2 restart all
+ exit
+EOF
