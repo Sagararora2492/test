@@ -1,1 +1,6 @@
-sshpass -p redhat root@10.0.3.99;cd /var/www/html/test;git pull
+#!/bin/sh
+sshpass -p redhat ssh -T root@10.0.3.99 <<EOF
+cd /var/www/html/test
+git pull
+exit
+EOF
